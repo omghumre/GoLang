@@ -8,12 +8,12 @@ import (
 
 func formhandler(w http.ResponseWriter, r *http.Request) {
 	if err := r.ParseForm(); err != nil {
-		fmt.Fprintf(w,"%v error: %v", w, err)
+		fmt.Fprintf(w, "%v error: %v", w, err)
 		return
 	}
-	fmt.Fprintln(w,"POST request success")
+	fmt.Fprintln(w, "POST request success")
 	name := r.FormValue("name")
-	fmt.Fprintf(w,"name is %s",name)
+	fmt.Fprintf(w, "name is %s", name)
 }
 
 func homehandler(w http.ResponseWriter, r *http.Request) {
@@ -23,7 +23,7 @@ func homehandler(w http.ResponseWriter, r *http.Request) {
 	if r.Method != "GET" {
 		http.Error(w, "method is not supported", http.StatusNotFound)
 	}
-	fmt.Fprintln(w,"Home")
+	fmt.Fprintln(w, "Home")
 }
 
 func main() {
