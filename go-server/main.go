@@ -13,7 +13,7 @@ func formhandler(w http.ResponseWriter, r *http.Request) {
 	}
 	fmt.Fprintln(w, "POST request success")
 	name := r.FormValue("name")
-	fmt.Fprintf(w, "name is %s", name)
+	fmt.Fprintf(w, "Data %s sent to Om", name)
 }
 
 func homehandler(w http.ResponseWriter, r *http.Request) {
