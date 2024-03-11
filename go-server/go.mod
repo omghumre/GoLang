@@ -1,3 +1,3 @@
-module test3
+module first
 
 go 1.22.0
