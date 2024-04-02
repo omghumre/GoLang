@@ -40,6 +40,11 @@ func deleteMovie(w http.ResponseWriter, r *http.Request){
 	}
 }
 
+func getMovie(w http.ResponseWriter , r *http.Request){
+	w.Header().Set("Constant-Type","applicatiion/json")
+	params := mux.Vars(r)
+}
+
 func main() {
 	r := mux.NewRouter()
 
